@@ -6,7 +6,7 @@ function App() {
   const [user, setUser] = useState("");
   const [isLogged, setIsLogged] = useState(false);
   return isLogged ? (
-    <WelcomePage user={user} setIsLogged={setIsLogged} isLogged={isLogged} />
+    <WelcomePage user={user} setIsLogged={setIsLogged} />
   ) : (
     <LoginPage setUser={setUser} setIsLogged={setIsLogged} />
   );

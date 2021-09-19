@@ -1,10 +1,13 @@
+import "./style.css";
 const WelcomePage = ({ user, setIsLogged }) => {
   const HandleLoggout = (setIsLogged) => setIsLogged(false);
   return (
-    <>
-      <h1>Welcome {user}, hope you enjoy</h1>
-      <button onClick={() => HandleLoggout(setIsLogged)}> Sair</button>
-    </>
+    <div className="WelcomePage">
+      <h1 className="title">Welcome {user}, hope you enjoy</h1>
+      <button className="btn" onClick={() => HandleLoggout(setIsLogged)}>
+        Sair
+      </button>
+    </div>
   );
 };
 export default WelcomePage;

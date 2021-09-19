@@ -1,5 +1,6 @@
 import { useState } from "react";
-const GetUserComponent = ({ setUser, setIsLogged, isLogged }) => {
+import "./style.css";
+const GetUserComponent = ({ setUser, setIsLogged }) => {
   const [userNameInput, setUserNameInput] = useState("");
   const UserNameSubmit = () => {
     setUser(userNameInput);
@@ -7,13 +8,13 @@ const GetUserComponent = ({ setUser, setIsLogged, isLogged }) => {
   };
 
   return (
-    <>
+    <div className="GetUserComponent">
       <input
         value={userNameInput}
         onChange={(e) => setUserNameInput(e.target.value)}
       ></input>
       <button onClick={() => UserNameSubmit()}>Login</button>
-    </>
+    </div>
   );
 };
 export default GetUserComponent;
