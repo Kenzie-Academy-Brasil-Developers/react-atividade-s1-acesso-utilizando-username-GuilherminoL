@@ -3,12 +3,12 @@ import WelcomePage from "./components/WelcomePage";
 import LoginPage from "./components/GetUserComponent";
 import { useState } from "react";
 function App() {
-  const user = "Guilhermino";
+  const [user, setUser] = useState("");
   const [isLogged, setIsLogged] = useState(false);
   return isLogged ? (
-    <WelcomePage user={user} setIsLogged={setIsLogged} />
+    <WelcomePage user={user} setIsLogged={setIsLogged} isLogged={isLogged} />
   ) : (
-    <LoginPage />
+    <LoginPage setUser={setUser} setIsLogged={setIsLogged} />
   );
 }
 
