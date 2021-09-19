@@ -1,0 +1,15 @@
+import "./App.css";
+import WelcomePage from "./components/WelcomePage";
+import LoginPage from "./components/GetUserComponent";
+import { useState } from "react";
+function App() {
+  const user = "Guilhermino";
+  const [isLogged, setIsLogged] = useState(false);
+  return isLogged ? (
+    <WelcomePage user={user} setIsLogged={setIsLogged} />
+  ) : (
+    <LoginPage />
+  );
+}
+
+export default App;
